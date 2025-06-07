@@ -1,8 +1,3 @@
-Sure! Here's a complete and professional **`README.md`** file for your GitHub repo:
-
----
-
-````markdown
 # 🧠 synthetic_llm-main
 
 A Python-based tool that uses Large Language Models (LLMs) like LLaMA2-Chat or GPT to generate structured, realistic synthetic test data from user-defined JSON schemas.
@@ -34,55 +29,3 @@ This project automates the generation of diverse test datasets using LLMs. It ac
 1. **Install dependencies**
    ```bash
    pip install -r requirements.txt
-````
-
-2. **Define your schema**
-
-   * Edit `json_schema.txt` with the structure you need.
-
-3. **Run the script**
-
-   ```bash
-   python app.py
-   ```
-
-4. **Check output**
-
-   * Output will be saved to `output.json`
-
-## 💡 Example Prompt
-
-```text
-You are a JSON generator. Given the following schema, generate 5 realistic and diverse data entries:
-Schema: { "name": "string", "email": "string", "age": "integer", "is_active": "boolean" }
-```
-
-## 📁 Project Structure
-
-```
-synthetic_llm-main/
-│
-├── app.py
-├── json_schema.txt
-├── requirements.txt
-├── synthetic_data/
-│   ├── __init__.py
-│   ├── generator.py
-│   ├── input_parser.py
-│   ├── llm_client.py
-│   ├── output_processor.py
-│   └── output_writer.py
-```
-
-## 🧪 Sample Output
-
-```json
-[
-  {
-    "name": "Alice",
-    "email": "alice@example.com",
-    "age": 27,
-    "is_active": true
-  }
-]
-```
