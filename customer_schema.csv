@@ -1,0 +1,5 @@
+name,data_type,constraints,hint
+user_id,VARCHAR,,"Format like U1023, unique per row"
+email,VARCHAR,,"Realistic email addresses like name@domain.com"
+signup_date,DATE,,"Between 2022-01-01 and today"
+is_verified,BOOLEAN,,"Randomly true or false"

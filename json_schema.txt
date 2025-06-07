@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Profile",
+  "description": "Schema for a user profile in a social media application",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "integer",
+      "description": "Unique identifier for the user",
+      "minimum": 10000
+    },
+    "username": {
+      "type": "string",
+      "description": "User's chosen username",
+      "minLength": 3,
+      "maxLength": 20,
+      "pattern": "^[a-zA-Z0-9_]+$"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "User's full name",
+      "minLength": 5,
+      "maxLength": 100
+    },
+    "email": {
+      "type": "string",
+      "description": "User's email address",
+      "format": "email"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "description": "User's date of birth",
+      "format": "date"
+    },
+    "address": {
+      "type": "object",
+      "description": "User's address",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "zip_code": {
+          "type": "string",
+          "pattern": "^[0-9]{5}(?:-[0-9]{4})?$"
+        }
+      },
+      "required": ["street", "city", "state", "zip_code"]
+    },
+    "interests": {
+      "type": "array",
+      "description": "List of user's interests",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "maxItems": 10
+    },
+    "is_active": {
+      "type": "boolean",
+      "description": "Indicates if the user account is active"
+    }
+  },
+  "required": [
+    "user_id",
+    "username",
+    "full_name",
+    "email",
+    "date_of_birth",
+    "is_active"
+  ]
+}
